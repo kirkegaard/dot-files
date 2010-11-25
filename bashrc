@@ -40,7 +40,6 @@ if [ $OS == "Darwin" ]; then
     # bash completion through brew
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
-		GIT_PS1_SHOWDIRTYSTATE=true
     fi
 
     # color options for ls
@@ -78,11 +77,6 @@ if [ $TERM == "xterm-color" ]; then
     alias la="ls -a $COLOR_OPTIONS"
     alias lal="ls -lha $COLOR_OPTIONS"
 fi
-
-
-function parse_git_dirty {
-    [[ $(git status 2> /dev/null | grep -i -E "(Changes to be committed|Changed but not updated)") ]] && echo " ${color_red}*${color_yellow}"
-}
 
 
 ## GENERAL SETTINGS
