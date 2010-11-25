@@ -35,11 +35,12 @@ if [ $OS == "Darwin" ]; then
     # set editor
     export EDITOR='mate -w'
 
-    GIT_PIECE='$(__git_ps1 " \[$color_yellow\](%s$(parse_git_dirty))\[$color_none\]")'
+    GIT_PIECE='$(__git_ps1 " \[$color_yellow\](%s)\[$color_none\]")'
 
     # bash completion through brew
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
+        GIT_PS1_SHOWDIRTYSTATE=true
     fi
 
     # color options for ls
