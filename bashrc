@@ -40,6 +40,7 @@ if [ $OS == "Darwin" ]; then
     # bash completion through brew
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
+		GIT_PS1_SHOWDIRTYSTATE=true
     fi
 
     # color options for ls
@@ -80,7 +81,7 @@ fi
 
 
 function parse_git_dirty {
-    [[ $(git status 2> /dev/null | grep -i "Changed but not updated") ]] && echo " ${color_red}*${color_yellow}"
+    [[ $(git status 2> /dev/null | grep -i -E "(Changes to be committed|Changed but not updated)") ]] && echo " ${color_red}*${color_yellow}"
 }
 
 
