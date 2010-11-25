@@ -40,6 +40,7 @@ if [ $OS == "Darwin" ]; then
     # bash completion through brew
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
+		# displays dirty state
         GIT_PS1_SHOWDIRTYSTATE=true
     fi
 
