@@ -46,6 +46,15 @@ if [ $OS == "Darwin" ]; then
 
     # color options for ls
     COLOR_OPTIONS='-G'
+    
+    export SSDUMPNAME=/tmp/ssdump.png
+    function ssdump() {
+        echo "Select window to dump"
+        screencapture -i ${SSDUMPNAME}
+        curl -sF file=@"${SSDUMPNAME}" metabox.it |pbcopy
+    }
+
+    alias ssdump=ssdump
 
     # alias specific for mac
     alias git='hub'
@@ -90,9 +99,9 @@ alias g="git"
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
 
 # prompt
-DATE_PIECE="\[${color_gray}\]\$(date '+%a %H:%M:%S')\[${color_none}\]"
-export PS1="${DATE_PIECE} \u\[${color_green}\]@\[${color_none}\]\h \[${color_gray}\]\w${GIT_PIECE}\n\[${color_green}\]\$\[${color_none}\] "
+#DATE_PIECE="\[${color_gray}\]\$(date '+%a %H:%M:%S')\[${color_none}\]"
+export PS1="\[${color_light_blue}\]\u\[${color_purple}\]@\[${color_light_blue}\]\h \[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]\$\[${color_none}\] "
 
-if [[ -s /Users/christian/.rvm/scripts/rvm ]] ; then
-	source /Users/christian/.rvm/scripts/rvm ;
+if [[ -s /Users/ranza/.rvm/scripts/rvm ]] ; then
+	source /Users/ranza/.rvm/scripts/rvm ;
 fi

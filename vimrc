@@ -19,7 +19,7 @@ if has("gui_running")
   set background=dark
   set t_Co=256
   set background=dark
-  colorscheme jellybeans
+  colorscheme twilight
 
   set nu
 else
@@ -29,7 +29,12 @@ else
   set nonu
 endif
 
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
 
+" Set the <Leader> for combo commands
+let mapleader = ","
 
 " Write contents of the file, if it has been modified, on buffer exit
 set autowrite
@@ -87,6 +92,7 @@ set t_RV=
 
 " Use 4 spaces for <Tab> and :retab
 set tabstop=4
+set expandtab
 
 " Write swap file to disk after every 50 characters
 set updatecount=50
@@ -197,6 +203,10 @@ if has("cscope")
 	map g<C-\> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
 endif
 
+" Always display the current line
+set cursorline
 
-" Set the <Leader> for combo commands
-let mapleader = ","
+" Show invisible chars like textmate
+nmap <leader>l :set list!<CR>
+set listchars=tab:▸\ ,eol:¬
+set list
