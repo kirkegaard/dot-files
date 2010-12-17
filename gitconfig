@@ -7,6 +7,9 @@
 	autocrlf = input
 	editor = mate
 	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[instaweb]
+	httpd=webrick
+	port=8000
 [color]
 	ui = auto
 [color "branch"]
@@ -33,3 +36,4 @@
 	lg = log -p
 	pp = !git pull && git push
 	this = !git init && git add . && git commit -m \"initial commit\"
+

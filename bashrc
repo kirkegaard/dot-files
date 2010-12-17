@@ -51,7 +51,7 @@ if [ $OS == "Darwin" ]; then
     function ssdump() {
         echo "Select window to dump"
         screencapture -i ${SSDUMPNAME}
-        curl -sF file=@"${SSDUMPNAME}" metabox.it |pbcopy
+        curl -F file=@"${SSDUMPNAME}" metabox.it
     }
 
     alias ssdump=ssdump
@@ -102,6 +102,5 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 #DATE_PIECE="\[${color_gray}\]\$(date '+%a %H:%M:%S')\[${color_none}\]"
 export PS1="\[${color_light_blue}\]\u\[${color_purple}\]@\[${color_light_blue}\]\h \[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]\$\[${color_none}\] "
 
-if [[ -s /Users/ranza/.rvm/scripts/rvm ]] ; then
-	source /Users/ranza/.rvm/scripts/rvm ;
-fi
+if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
+
