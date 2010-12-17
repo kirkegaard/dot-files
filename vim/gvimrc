@@ -1,0 +1,19 @@
+if has("gui_macvim")
+    " Set max height and width in fullscreen
+    set fuoptions=maxvert,maxhorz
+    " Custom font with awesome zeros
+    set guifont=DroidSansMonoCustom:h12
+    " No toolbar and always show tabs
+    set guioptions-=T
+    set stal=2
+end
+
+" Antialias my font
+set anti
+
+" Default size of window
+set columns=180
+set lines=50
+
+" Tab headings 
+set gtl=%t gtt=%F
