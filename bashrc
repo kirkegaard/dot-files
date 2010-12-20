@@ -23,14 +23,12 @@ export color_gray='\e[0;90m'
 export color_light_gray='\e[0;37m'
 
 
-# add local directories
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-
 ## MAC SETTINGS
 if [ $OS == "Darwin" ]; then
     # add mamp on mac
+    #export PATH=/Applications/MAMP/bin/php5.2/bin/:/Applications/MAMP/bin/apache2/bin/:$PATH
     export PATH=$PATH:/Applications/MAMP/bin/php5.2/bin/:/Applications/MAMP/bin/apache2/bin/
+
 
     # set editor
     export EDITOR='mate -w'
@@ -57,7 +55,8 @@ if [ $OS == "Darwin" ]; then
     alias ssdump=ssdump
 
     # alias specific for mac
-    alias git='hub'
+    alias irb='irb --simple-prompt -rirb/completion'
+	alias git='hub'
     alias m='mate .'
     alias zf='zf.sh'
     alias top='top -o cpu'
@@ -91,6 +90,10 @@ fi
 
 
 ## GENERAL SETTINGS
+
+# add local directories
+#export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 # bash smart tab completion
 bind "set show-all-if-ambiguous On"
 
