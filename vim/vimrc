@@ -147,6 +147,9 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " PHP parser check (CTRL-L)
 :autocmd FileType php noremap <C-L> :!php -l %<CR>
 
+" JS parser check using jslint from brew (brew install jslint)
+:autocmd FileType javascript noremap <C-L> :!jsl -nologo -nofilelisting -nosummary -nocontext -conf ~/.jsl.conf -process %<CR>
+
 " MAPPINGS
 " --------
 
