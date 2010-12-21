@@ -114,4 +114,4 @@ hi Error guibg=#602020
 
 exec 'hi NonText    guifg='.s:grey.' guibg='.s:darkgrey
 exec 'hi SpecialKey guifg='.s:grey.' guibg='.s:darkgrey
-
+exec 'hi ColorColumn guibg=#2d2d2d'
