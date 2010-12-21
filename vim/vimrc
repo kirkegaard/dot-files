@@ -78,6 +78,10 @@ set pastetoggle=<F10>
 " Show line, column number, and relative position within a file in the status line
 set ruler
 
+" Display a margin at 80 chars
+" set formatoptions=qroctn2
+set colorcolumn=80
+
 " Scroll when cursor gets within 3 characters of top/bottom edge
 set scrolloff=3
 
@@ -139,6 +143,12 @@ let g:netrw_browse_split = 1
 
 " Set statusline and include fugitive statusline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" PHP parser check (CTRL-L)
+:autocmd FileType php noremap <C-L> :!php -l %<CR>
+
+" JS parser check using jslint from brew (brew install jslint)
+:autocmd FileType javascript noremap <C-L> :!jsl -nologo -nofilelisting -nosummary -nocontext -conf ~/.jsl.conf -process %<CR>
 
 " MAPPINGS
 " --------
