@@ -11,6 +11,14 @@ call pathogen#helptags()
 filetype plugin on
 filetype indent on
 
+" Turn off compatibility mode
+set nocompatible
+
+" Turn off backup and swap files
+set nobackup
+set nowritebackup
+set noswapfile
+
 " Turn syntax highlighting on
 syntax on
 
@@ -24,8 +32,12 @@ if has("gui_running")
   set background=dark
   set t_Co=256
   set background=dark
-  colorscheme twilight
 
+  " Display a margin at 80 chars
+  " set formatoptions=qroctn2
+  set colorcolumn=80
+
+  colorscheme monokai
   set nu
 else
   colorscheme zellner
@@ -77,10 +89,6 @@ set pastetoggle=<F10>
 
 " Show line, column number, and relative position within a file in the status line
 set ruler
-
-" Display a margin at 80 chars
-" set formatoptions=qroctn2
-set colorcolumn=80
 
 " Scroll when cursor gets within 3 characters of top/bottom edge
 set scrolloff=3
