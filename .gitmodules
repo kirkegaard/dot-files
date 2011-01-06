@@ -46,3 +46,6 @@
 	path = vim/bundle/autoclose
 	url = https://github.com/mtvee/vim-autoclose.git
     ignore = untracked
+[submodule "vim/bundle/NERDCommenter"]
+	path = vim/bundle/NERDCommenter
+	url = https://github.com/vim-scripts/The-NERD-Commenter.git

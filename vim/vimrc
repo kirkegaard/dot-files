@@ -79,7 +79,7 @@ set laststatus=2
 set matchtime=2
 
 " Don't highlight results of a search
-set nohlsearch
+set hlsearch
 
 " Enable CTRL-A/CTRL-X to work on octal and hex numbers, as well as characters
 set nrformats=octal,hex,alpha
@@ -90,8 +90,16 @@ set pastetoggle=<F10>
 " Show line, column number, and relative position within a file in the status line
 set ruler
 
+" lines to scroll when cursor leaves screen
+set scrolljump=5
+
 " Scroll when cursor gets within 3 characters of top/bottom edge
 set scrolloff=3
+
+" Wrapping settings.
+" @todo figure out how to wrap words like nolist, without loosing end chars
+set wrap
+set linebreak
 
 " Round indent to multiple of 'shiftwidth' for > and < commands
 set shiftround
@@ -194,6 +202,11 @@ nnoremap <Esc>p  p'[v']=
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
+
+" toggle nerdcomment
+vmap  o  :call NERDComment(1, 'toggle')<CR>
+let g:NERDShutUp=1
+
 
 " Switching tabs
 " For mac users (using the 'apple' key)
