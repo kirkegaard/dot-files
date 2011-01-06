@@ -37,9 +37,12 @@
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
 	url = https://github.com/wincent/Command-T.git
+    ignore = untracked
 [submodule "vim/bundle/autoclosetag"]
 	path = vim/bundle/autoclosetag
 	url = https://github.com/vim-scripts/HTML-AutoCloseTag.git
+    ignore = untracked
 [submodule "vim/bundle/autoclose"]
 	path = vim/bundle/autoclose
 	url = https://github.com/mtvee/vim-autoclose.git
+    ignore = untracked
