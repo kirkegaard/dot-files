@@ -67,7 +67,7 @@ set backspace=indent,eol,start
 set enc=utf-8
 
 " Remember up to 100 'colon' commmands and search patterns
-set history=100
+set history=1000
 
 " Enable incremental search
 set incsearch
@@ -151,6 +151,10 @@ let g:netrw_browse_split = 1
 
 " Set statusline and include fugitive statusline
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" Autoclose tags
+:autocmd FileType xml,html,xhtml let b:delimitMate_matchpairs = "(:),[:],{:}"
+:autocmd FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
 
 " PHP parser check (CTRL-L)
 :autocmd FileType php noremap <C-L> :!php -l %<CR>
