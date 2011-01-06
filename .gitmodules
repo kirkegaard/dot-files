@@ -24,7 +24,7 @@
     ignore = untracked
 [submodule "vim/bundle/snipmate.vim"]
 	path = vim/bundle/snipmate.vim
-	url = https://github.com/weierophinney/snipmate.vim.git
+    url = https://github.com/msanders/snipmate.vim.git
     ignore = untracked
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
@@ -49,3 +49,8 @@
 [submodule "vim/bundle/NERDCommenter"]
 	path = vim/bundle/NERDCommenter
 	url = https://github.com/vim-scripts/The-NERD-Commenter.git
+    ignore = untracked
+[submodule "vim/bundle/snipmate-snippets"]
+	path = vim/bundle/snipmate-snippets
+	url = https://github.com/spf13/snipmate-snippets.git
+    ignore = untracked
