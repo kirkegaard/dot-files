@@ -207,6 +207,8 @@ vnoremap > >gv
 vmap  o  :call NERDComment(1, 'toggle')<CR>
 let g:NERDShutUp=1
 
+" NerdtreeToggle bind
+nnoremap <leader>d :NERDTreeToggle<cr>
 
 " Switching tabs
 " For mac users (using the 'apple' key)
