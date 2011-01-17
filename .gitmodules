@@ -54,3 +54,7 @@
 	path = vim/bundle/snipmate-snippets
 	url = https://github.com/spf13/snipmate-snippets.git
     ignore = untracked
+[submodule "vim/bundle/vim.ack"]
+	path = vim/bundle/vim.ack
+	url = https://github.com/mileszs/ack.vim.git
+    ignore = untracked
