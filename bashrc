@@ -2,6 +2,7 @@
 OS=`uname -s`
 COLOR_OPTIONS=''
 
+export CLICOLOR=1;
 
 ## BASH COLORS
 export color_none='\e[0m'
@@ -26,12 +27,11 @@ export color_light_gray='\e[0;37m'
 ## MAC SETTINGS
 if [ $OS == "Darwin" ]; then
     # add mamp on mac
-    #export PATH=/Applications/MAMP/bin/php5.2/bin/:/Applications/MAMP/bin/apache2/bin/:$PATH
-    export PATH=$PATH:/Applications/MAMP/bin/php5.2/bin/:/Applications/MAMP/bin/apache2/bin/
-
+    export PATH=/Applications/MAMP/bin/php5.3/bin:/Applications/MAMP/bin/apache2/bin:$PATH
+    export NODE_PATH=/usr/local/lib/node
 
     # set editor
-    export EDITOR='mate -w'
+    export EDITOR='mvim -f'
 
     GIT_PIECE='$(__git_ps1 " \[$color_yellow\](%s)\[$color_none\]")'
 
@@ -44,7 +44,7 @@ if [ $OS == "Darwin" ]; then
 
     # color options for ls
     COLOR_OPTIONS='-G'
-    
+
     export SSDUMPNAME=/tmp/ssdump.png
     function ssdump() {
         echo "Select window to dump"
