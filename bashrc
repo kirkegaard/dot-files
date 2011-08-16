@@ -14,7 +14,7 @@ export color_green='\e[0;32m'
 export color_light_green='\e[1;32m'
 export color_cyan='\e[0;36m'
 export color_light_cyan='\e[1;36m'
-export color_red="\e[0;31m"
+export color_red='\e[0;31m'
 export color_light_red='\e[1;31m'
 export color_purple='\e[0;35m'
 export color_light_purple='\e[1;35m'
@@ -27,7 +27,7 @@ export color_light_gray='\e[0;37m'
 ## MAC SETTINGS
 if [ $OS == "Darwin" ]; then
     # add mamp on mac
-    export PATH=/Applications/MAMP/bin/php5.3/bin:/Applications/MAMP/bin/apache2/bin:$PATH
+    export PATH=~/.bin:/usr/local/php5/bin:$PATH
     export NODE_PATH=/usr/local/lib/node
 
     # set editor
@@ -50,6 +50,7 @@ if [ $OS == "Darwin" ]; then
         echo "Select window to dump"
         screencapture -i ${SSDUMPNAME}
         curl -F file=@"${SSDUMPNAME}" metabox.it
+        echo
     }
 
     alias ssdump=ssdump
@@ -60,7 +61,6 @@ if [ $OS == "Darwin" ]; then
     alias m='mate .'
     alias zf='zf.sh'
     alias top='top -o cpu'
-    alias logs='tail -f /Applications/MAMP/logs/php_error.log /Applications/MAMP/logs/access.log /Applications/MAMP/logs/error.log /Applications/MAMP/logs/mysql_error_log /Applications/MAMP/logs/mysql_error_log.err /Applications/MAMP/logs/apache_error_log'
 
     # add z, the new j
     . ~/.bin/z.sh
@@ -91,9 +91,6 @@ fi
 
 ## GENERAL SETTINGS
 
-# add local directories
-#export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
 # bash smart tab completion
 bind "set show-all-if-ambiguous On"
 
@@ -102,8 +99,10 @@ alias g="git"
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
 
 # prompt
-#DATE_PIECE="\[${color_gray}\]\$(date '+%a %H:%M:%S')\[${color_none}\]"
-export PS1="\[${color_light_blue}\]\u\[${color_purple}\]@\[${color_light_blue}\]\h \[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]\$\[${color_none}\] "
+# export PS1="\[${color_light_blue}\]\u\[${color_purple}\]@\[${color_light_blue}\]\h \[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]\$\[${color_none}\] "
+
+export PS1="\[${color_light_green}\]\w${GIT_PIECE} ${color_purple}> ${color_none}"
+
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
