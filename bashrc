@@ -61,6 +61,7 @@ if [ $OS == "Darwin" ]; then
     alias m='mate .'
     alias zf='zf.sh'
     alias top='top -o cpu'
+    alias np='nowplaying.sh |pbcopy && echo "Copied song"'
 
     # add z, the new j
     . ~/.bin/z.sh
