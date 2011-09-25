@@ -100,7 +100,7 @@ alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' 
 # prompt
 # export PS1="\[${color_light_blue}\]\u\[${color_purple}\]@\[${color_light_blue}\]\h \[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]\$\[${color_none}\] "
 
-export PS1="\[${color_light_green}\]\w${GIT_PIECE} ${color_purple}» ${color_none}"
+export PS1="\[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]» \[${color_none}\]"
 
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
