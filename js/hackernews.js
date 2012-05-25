@@ -1,0 +1,1 @@
+javascript:(function(){var st = document.createElement('link');st.type = "text/css";st.href = "https://raw.github.com/Primigenus/Cleaner-Hacker-News/master/cleaner-hn.css";st.rel = "stylesheet";document.body.appendChild(st)})()

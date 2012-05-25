@@ -27,11 +27,11 @@ export color_light_gray='\e[0;37m'
 ## MAC SETTINGS
 if [ $OS == "Darwin" ]; then
     # add mamp on mac
-    export PATH=~/.bin:/usr/local/php5/bin:$PATH
+    export PATH=~/.bin:/usr/local/php5/bin:/usr/local/sbin:$PATH
     export NODE_PATH=/usr/local/lib/node
 
     # set editor
-    export EDITOR='mvim -f'
+    export EDITOR='mvim'
 
     GIT_PIECE='$(__git_ps1 " \[$color_yellow\](%s)\[$color_none\]")'
 
@@ -49,7 +49,7 @@ if [ $OS == "Darwin" ]; then
     function ssdump() {
         echo "Select window to dump"
         screencapture -i ${SSDUMPNAME}
-        curl -F file=@"${SSDUMPNAME}" metabox.it
+        curl -F file=@"${SSDUMPNAME}" dl.gs
         echo
     }
 
