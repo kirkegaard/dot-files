@@ -4,6 +4,16 @@ COLOR_OPTIONS=''
 
 export CLICOLOR=1;
 
+## LOCALES
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL=
+
 ## BASH COLORS
 export color_none='\e[0m'
 export color_white='\e[1;37m'
@@ -94,6 +104,7 @@ fi
 shopt -s nocaseglob
 
 # general aliases
+alias np="wget -qO - http://ws.audioscrobbler.com/1.0/user/ranza/recenttracks.txt | cut -d , -f 2 | head -1"
 alias g="git"
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"
 
@@ -105,3 +116,6 @@ export PS1="\[${color_light_green}\]\w${GIT_PIECE} \[${color_purple}\]» \[${col
 
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
