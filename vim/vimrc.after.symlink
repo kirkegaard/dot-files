@@ -1,0 +1,7 @@
+color desert
+let macvim_hig_shift_movement = 1
+
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
