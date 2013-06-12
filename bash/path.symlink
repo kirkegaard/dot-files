@@ -1,5 +1,5 @@
-PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin
-PATH=$PATH:/usr/local/bin
-PATH=$PATH:~/.rvm/bin
+PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+PATH=/usr/local/bin:$PATH
+PATH=~/.rvm/bin:$PATH
 
 export PATH

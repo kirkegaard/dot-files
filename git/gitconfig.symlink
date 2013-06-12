@@ -1,8 +1,8 @@
 [hub]
     protocol = https
 [user]
-    name = AUTHORNAME
-    email = AUTHOREMAIL
+    name = kirkegaard
+    email = hello@christiank.org
 [credential]
     helper = osxkeychain
 [alias]
