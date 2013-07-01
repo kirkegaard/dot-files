@@ -35,7 +35,7 @@
     ci = commit
     co = checkout
     df = diff
-    lg = log -p
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     pp = !git pull && git push
     pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
     this = !git init && git add . && git commit -m \"initial commit\"
