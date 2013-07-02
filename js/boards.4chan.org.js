@@ -1,3 +1,14 @@
+$('<a>').attr('href', '#')
+        .html('[Show images] ')
+        .bind('click', function(e) {
+            e.preventDefault();
+            $('.fileThumb').each(function() {
+                $(this).children().attr('src', $(this).attr('href')).attr('style', '');
+            });
+        }
+).prependTo('.navLinks');
+
+/*
 var imgs = [];
 $.each($('.fileThumb'), function() {
     imgs.push($(this).attr('href'));
@@ -26,6 +37,7 @@ var link = $('<a>')
 );
 
 link.prependTo('.navLinks');
+*/
 
 
 function array_chunk (input, size, preserve_keys) {
