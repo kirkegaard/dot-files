@@ -29,7 +29,7 @@ alias spotify="osascript ~/code/SpotifyControl/SpotifyControl.scpt"
 alias vlc="osascript ~/code/VLCControl/VLCControl.scpt"
 
 # Fetch latest song played from last.fm
-alias nowplaying="wget -qO - http://ws.audioscrobbler.com/1.0/user/ranza/recenttracks.txt | cut -d , -f 2 | head -1"
+alias nowplaying="curl -s http://ws.audioscrobbler.com/1.0/user/ranza/recenttracks.txt | cut -d , -f 2 | head -1"
 
 # looks for what commands you use the most
 alias profileme="history | awk '{print \$2}' | awk 'BEGIN{FS=\"|\"}{print \$1}' | sort | uniq -c | sort -nr | head -n 20"

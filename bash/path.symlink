@@ -1,6 +1,7 @@
 PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 PATH=/usr/local/bin:$PATH
 PATH=~/.bin:$PATH
+PATH=~/.composer/vendor/bin:$PATH
 PATH=~/.rvm/bin:$PATH
 
 export PATH

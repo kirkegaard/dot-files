@@ -1,3 +1,9 @@
+# SG
+function sg() {
+    cd ~/Development/magistrbot
+    python plugins/sg.py "$@" all
+}
+
 # Simple calculator
 function calc() {
     local result=""
